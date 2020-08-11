@@ -27,11 +27,11 @@ function App() {
           <Route exact path="/logout">
             <LogOut />
           </Route>
+          <Route path="/post/:id">
+            <PostDetails />
+          </Route>
           <Route exact path="/newpost">
             <NewPost />
-          </Route>
-          <Route exact path="/post">
-            <PostDetails />
           </Route>
         </Switch>
       </main>

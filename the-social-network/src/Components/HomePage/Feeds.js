@@ -1,13 +1,12 @@
 import React from 'react';
-import AllPosts from "./AllPosts";
+import AllPosts from "../Posts/AllPosts";
 import Notifications from "./Notifications";
 
 const Feeds = () => {
   return (
     <div>
-      Newsfeed
-      <AllPosts />
       <Notifications />
+      <AllPosts />
     </div>
   );
 }

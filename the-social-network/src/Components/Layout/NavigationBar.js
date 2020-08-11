@@ -1,6 +1,8 @@
 import React from "react";
 import Logo from "./Logo";
-import { Link } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import RegisteredUserLinks from "./RegisteredUserLinks";
+import NonRegisteredUserLinks from "./NonRegisteredUserLinks";
 
 const NavigationBar = () => {
   return (
@@ -8,21 +10,23 @@ const NavigationBar = () => {
       <div class="nav-wrapper">
         <Logo />
         <ul id="nav-mobile" class="right hide-on-small-and-down">
-          <li>
-            <Link to="/login">Login</Link>
+          <NonRegisteredUserLinks />
+          <RegisteredUserLinks />
+          {/* <li>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <Link to="/register">Register</Link>
+            <NavLink to="/register">Register</NavLink>
           </li>
           <li>
-            <Link to="logout">Logout</Link>
+            <NavLink to="logout">Logout</NavLink>
           </li>
           <li>
-            <Link to="newpost">New Post</Link>
+            <NavLink to="newpost">New Post</NavLink>
           </li>
           <li>
-            <Link to="post">Post</Link>
-          </li>
+            <NavLink to="post">Post</NavLink>
+          </li> */}
         </ul>
       </div>
     </nav>
