@@ -9,14 +9,11 @@ const PostSummary = () => {
           <div className="card blue-grey darken-1">
             <div className="card-content white-text">
               <span className="card-title">Post</span>
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut minima neque aliquam dolore magni nemo modi odit optio perspiciatis eius blanditiis, doloribus nobis consectetur alias dolorem unde dignissimos necessitatibus ipsam?
               </p>
             </div>
             <div className="card-action">
-              <Link exact to="/">
+              <Link exact="true" to="/">
                 To homepage
               </Link>
             </div>

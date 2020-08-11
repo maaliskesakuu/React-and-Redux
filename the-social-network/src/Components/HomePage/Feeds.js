@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import AllPosts from "../Posts/AllPosts";
 import Notifications from "./Notifications";
 
 const Feeds = () => {
   return (
-    <div>
+    <div className="container">
       <Notifications />
       <AllPosts />
     </div>
   );
-}
+};
 
 export default Feeds;

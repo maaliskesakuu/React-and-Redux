@@ -6,7 +6,7 @@ import Register from "./Components/Auth/Register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LogOut from "./Components/Auth/LogOut";
 import Feeds from "./Components/HomePage/Feeds";
-import NewPost from "./Components/Posts/NewPost";
+import CreateNewPost from "./Components/Posts/CreateNewPost";
 import PostDetails from "./Components/Posts/PostDetails";
 
 function App() {
@@ -15,24 +15,12 @@ function App() {
       <NavigationBar />
       <main>
         <Switch>
-          <Route exact path="/">
-            <Feeds />
-          </Route>
-          <Route exact path="/login">
-            <LogIn />
-          </Route>
-          <Route exact path="/register">
-            <Register />
-          </Route>
-          <Route exact path="/logout">
-            <LogOut />
-          </Route>
-          <Route path="/post/:id">
-            <PostDetails />
-          </Route>
-          <Route exact path="/newpost">
-            <NewPost />
-          </Route>
+          <Route exact path="/" component={Feeds} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/register" component={Register} />
+          <Route path="/logout" component={LogOut} />
+          <Route path="/post/:id" component={PostDetails} />
+          <Route path="/create" component={CreateNewPost} />
         </Switch>
       </main>
     </Router>
