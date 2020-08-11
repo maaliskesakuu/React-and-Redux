@@ -4,11 +4,11 @@ const Notifications = () => {
   return (
     <div>
       Notifications
-      <ul class="collection">
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
+      <ul className="collection">
+        <li className="collection-item">Alvin</li>
+        <li className="collection-item">Alvin</li>
+        <li className="collection-item">Alvin</li>
+        <li className="collection-item">Alvin</li>
       </ul>
     </div>
   );

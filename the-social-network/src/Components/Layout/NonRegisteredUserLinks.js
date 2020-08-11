@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const NonRegisteredUserLinks = () => {
   return (
     <div>
-      <ul id="nav-mobile" class="right hide-on-small-and-down">
+      <ul id="nav-mobile" className="right hide-on-small-and-down">
         <li>
           <NavLink to="/login">Login</NavLink>
         </li>

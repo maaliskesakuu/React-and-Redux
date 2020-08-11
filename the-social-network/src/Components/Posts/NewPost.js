@@ -5,39 +5,39 @@ const NewPost = () => {
     <div>
       <div className="container">
         <h2>Add a post</h2>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" />
-                <label for="first_name">First Name</label>
+        <div className="row">
+          <form className="col s12">
+            <div className="row">
+              <div className="input-field col s6">
+                <input id="first_name" type="text" className="validate" />
+                <label htmlFor="first_name">First Name</label>
               </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" />
-                <label for="last_name">Last Name</label>
+              <div className="input-field col s6">
+                <input id="last_name" type="text" className="validate" />
+                <label htmlFor="last_name">Last Name</label>
               </div>
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <textarea
                   id="postTitle"
-                  class="materialize-textarea"
+                  className="materialize-textarea"
                 ></textarea>
-                <label for="postTitle">Title</label>
+                <label htmlFor="postTitle">Title</label>
               </div>
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <textarea
                   id="textarea1"
-                  class="materialize-textarea"
+                  className="materialize-textarea"
                 ></textarea>
-                <label for="textarea1">Content</label>
+                <label htmlFor="textarea1">Content</label>
               </div>
             </div>
             <button
-              class="btn waves-effect waves-light"
+              className="btn waves-effect waves-light"
               type="submit"
               name="action"
             >
               Submit
-              <i class="material-icons right">send</i>
+              <i className="material-icons right">send</i>
             </button>
           </form>
         </div>
