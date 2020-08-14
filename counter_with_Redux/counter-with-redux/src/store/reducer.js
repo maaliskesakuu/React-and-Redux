@@ -10,6 +10,11 @@ const reducer = (state = initialState, action) => {
       return { ...state, counter: state.counter - action.value };
     case "RESET":
       return { ...state, counter: 0 };
+    case "STORE_RESULT":
+      return {
+        ...state,
+        results: state.results.concat({ id: new Date(), value: state.counter }),
+      };
   }
   return state;
 };
@@ -49,6 +54,7 @@ const reducer = (state = initialState, action) => {
 
 const initialState = {
   counter: 0,
+  results: [],
 };
 
 export default reducer;
