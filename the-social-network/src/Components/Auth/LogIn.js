@@ -7,8 +7,11 @@ class LogIn extends Component {
     this.state = {
       email: null,
       password: null,
+      auth: null,
     };
+
     this.handleSubmission = this.handleSubmission.bind(this);
+
     this.handleValueChange = this.handleValueChange.bind(this);
   }
 
@@ -18,15 +21,15 @@ class LogIn extends Component {
 
   handleSubmission = e => {
     e.preventDefault();
-       Firebase.auth().signInWithEmailAndPassword(
-         this.state.email,
-         this.state.password
-       ).then(() => {
-         console.log('Login success');
-       }).catch(err => {
-         console.log('Login fail: ' + err)
-       })
-    console.log(this);
+
+    Firebase.auth()
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(() => {
+        console.log("Login success");
+      })
+      .catch(err => {
+        console.log("Login fail: " + err);
+      });
   };
 
   render() {

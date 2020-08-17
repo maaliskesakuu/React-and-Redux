@@ -10,7 +10,9 @@ class Register extends Component {
       email: null,
       password: null,
     };
+
     this.handleValueChange = this.handleValueChange.bind(this);
+
     this.handleSubmission = this.handleSubmission.bind(this);
   }
 
@@ -20,11 +22,24 @@ class Register extends Component {
 
   handleSubmission = e => {
     e.preventDefault();
+
     Firebase.auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(() => {
-        console.log('Register success');
-      }).catch(function (error) {
+      .then(resp => {
+        Firebase.firestore()
+          .collection("users")
+          .doc(resp.user.uid)
+          .set({
+            firstname: this.state.first_name,
+            lastname: this.state.last_name,
+            email: this.state.email,
+          })
+          .then(() => {
+            console.log("Register success");
+            console.log(resp.user.uid);
+          });
+      })
+      .catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -35,7 +50,6 @@ class Register extends Component {
         }
         console.log(error);
       });
-    console.log(this);
   };
 
   render() {
