@@ -10,11 +10,11 @@ const PostDetails = () => {
             <div className="card-content white-text">
               <span className="card-title">Post</span>
               <span className="card-content">
-              <p>
+                <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Quaerat ipsum sunt quam dolore ipsa neque, incidunt cupiditate
                   ab saepe, earum vel accusamus quidem fugiat dolores!
-              </p>
+                </p>
               </span>
             </div>
             {/* <div className="card-action">

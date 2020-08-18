@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import Firebase from "firebase";
+// import Firebase from "firebase";
+import { connect } from "react-redux";
+import { createPost } from "../../store/actions/postActions";
 
 class CreateNewPost extends Component {
   constructor(props) {
@@ -20,20 +22,24 @@ class CreateNewPost extends Component {
 
   handleSubmission = e => {
     e.preventDefault();
+    // this.props.createPost({
+    //   title: this.state.title,
+    //   content: this.state.content,
+    // });
 
-    Firebase.firestore()
-      .collection("posts")
-      .add({
-        content: this.state.content,
-        time: new Date(),
-        title: this.state.title,
-        user: Firebase.auth().currentUser.uid,
-      })
-      .then(() => {
-        this.setState({
-          posted: true,
-        });
-      });
+    // Firebase.firestore()
+    //   .collection("posts")
+    //   .add({
+    //     content: this.state.content,
+    //     time: new Date(),
+    //     title: this.state.title,
+    //     user: Firebase.auth().currentUser.uid,
+    //   })
+    //   .then(() => {
+    //     this.setState({
+    //       posted: true,
+    //     });
+    //   });
   };
 
   render() {
@@ -89,7 +95,17 @@ class CreateNewPost extends Component {
   }
 }
 
-export default CreateNewPost;
+const mapStateToProps = state => {
+  return {};
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    createPost: post => dispatch(createPost(post)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CreateNewPost);
 
 // import React, { useState } from "react";
 
