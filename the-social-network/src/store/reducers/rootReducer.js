@@ -36,16 +36,29 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "CREATE_POST_SUCCESSFUL":
-      console.log("Created a new post");
-      return state;
-    case "CREATE_POST_ERROR":
-      console.log("Post creation fail: " + action.err.message);
-      return state;
-    default:
-      return state;
-  }
+  console.log("Current state is: ");
+  console.log(state);
+  if (action.type === "CREATE_NEW_POST")
+    return {
+      posts: [...state.posts, action.post],
+    };
+  if (action.type === "REMOVE_ALL_POSTS")
+    return {
+      ...state, posts:[],
+    };
+  return state;
 };
+
+// With switch
+// const rootReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case "CREATE_NEW_POST":
+//       return {
+//         posts: [...state.posts, action.post],
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
 export default rootReducer;

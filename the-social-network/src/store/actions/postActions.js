@@ -1,14 +1,9 @@
-import Firebase from "firebase";
+// import Firebase from "firebase";
+
+export const removePosts = () => {
+  return { type: "REMOVE_ALL_POSTS" };
+};
 
 export const createPost = post => {
-  return dispatch => {
-    Firebase.firestore().collection("posts")
-      .add(post)
-      .then(() => {
-        dispatch({ type: "CREATE_POST_SUCCESSFUL" });
-      })
-      .catch(err => {
-        dispatch({ type: "CREATE_POST_ERROR" }, err);
-      });
-  };
+  return { type: "CREATE_NEW_POST", post };
 };

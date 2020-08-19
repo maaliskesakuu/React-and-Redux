@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PostSummary from "./PostSummary";
 import { connect } from "react-redux";
+// import { removePosts } from "../../store/actions/postActions";
 
 class AllPosts extends Component {
   render() {
@@ -8,9 +9,13 @@ class AllPosts extends Component {
     console.log(this.props.posts);
     return (
       <div>
+        <button className="btn" onClick={this.props.removePost}>
+          Remove all posts
+        </button>
         {this.props.posts
           ? this.props.posts.map(post => (
-              <PostSummary post={post} key={post.id} />
+              <PostSummary post={post} key={Math.random() * 99} />
+              // <PostSummary post={post} key={post.id} />
             ))
           : "Loading ..."}
       </div>
@@ -24,7 +29,20 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(AllPosts);
+const mapDispatchToProps = dispatch => {
+  return {
+    removePost: () => {
+      dispatch({ type: "REMOVE_ALL_POSTS" });
+    },
+  };
+};
+
+//not working correctly
+// const mapDispatchToProps = dispatch => {
+//   dispatch(removePosts);
+// };
+
+export default connect(mapStateToProps, mapDispatchToProps)(AllPosts);
 
 // import React, { Component } from "react";
 // import PostSummary from "./PostSummary";

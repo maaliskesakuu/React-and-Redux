@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 // import Firebase from "firebase";
 import { connect } from "react-redux";
-import { createPost } from "../../store/actions/postActions";
+// import { createPost } from "../../store/actions/postActions";
 
 class CreateNewPost extends Component {
   constructor(props) {
@@ -22,10 +22,10 @@ class CreateNewPost extends Component {
 
   handleSubmission = e => {
     e.preventDefault();
-    // this.props.createPost({
-    //   title: this.state.title,
-    //   content: this.state.content,
-    // });
+    this.props.createPost({
+      title: this.state.title,
+      content: this.state.content,
+    });
 
     // Firebase.firestore()
     //   .collection("posts")
@@ -95,17 +95,30 @@ class CreateNewPost extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {};
-};
-
 const mapDispatchToProps = dispatch => {
   return {
-    createPost: post => dispatch(createPost(post)),
+    // this one can be shortened
+    // createPost: post => {
+    //   return dispatch({
+    //     type: "CREATE_NEW_POST",
+    //     post: post,
+    //   });
+    // },
+    createPost: post =>
+      dispatch({
+        type: "CREATE_NEW_POST",
+        post,
+      }),
+    
+    //not working correctly
+    // createPost: post =>
+    //   dispatch(
+    //     createPost
+    //   )
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateNewPost);
+export default connect(null, mapDispatchToProps)(CreateNewPost);
 
 // import React, { useState } from "react";
 
