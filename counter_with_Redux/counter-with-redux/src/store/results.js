@@ -1,20 +1,18 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from "../actions";
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.RESET:
-      return { ...state, counter: 0 };
     case actionTypes.DELETE_RESULT:
       return { ...state, results: [] };
     case actionTypes.DELETE:
-      const updateArray = state.results.filter(
+      const updatedArray = state.results.filter(
         item => item.id !== action.resultItem
       );
-      return { ...state, results: updateArray };
+      return { ...state, results: updatedArray };
     case actionTypes.STORE_RESULT:
       return {
         ...state,
-        results: state.results.concat({ id: new Date(), result: action.result}),
+        results: state.results.concat({ id: new Date(), value: action.result }),
       };
   }
   return state;
@@ -22,7 +20,7 @@ const reducer = (state = initialState, action) => {
 
 const initialState = {
   results: [],
+  counter: 0,
 };
 
 export default reducer;
-
