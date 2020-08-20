@@ -1,15 +1,24 @@
+import * as actionTypes from '../actions';
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "INCREMENT":
+    case actionTypes.INCREMENT:
       return { ...state, counter: state.counter + 1 };
-    case "DECREASE":
+    case actionTypes.DECREASE:
       return { ...state, counter: state.counter - 1 };
-    case "ADDFIVE":
+    case actionTypes.ADDFIVE:
       return { ...state, counter: state.counter + action.value };
-    case "REMOVEFIVE":
+    case actionTypes.REMOVEFIVE:
       return { ...state, counter: state.counter - action.value };
-    case "RESET":
+    case actionTypes.RESET:
       return { ...state, counter: 0 };
+    case actionTypes.DELETE_RESULT:
+      return { ...state, results: [] };
+    case actionTypes.DELETE:
+      const updateArray = state.results.filter(
+        item => item.id !== action.resultItem
+      );
+      return { ...state, results: updateArray };
     case "STORE_RESULT":
       return {
         ...state,
@@ -19,6 +28,7 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
+// switch is used instead of if statements
 // if (action.type === "INCREMENT") {
 //   return {
 //     ...state,

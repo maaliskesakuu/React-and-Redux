@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import * as actionType from '../actions';
+
 class Counter extends Component {
   render() {
     return (
@@ -16,9 +18,16 @@ class Counter extends Component {
         </div>
         <ul>
           {this.props.storedResults.map(item => (
-            <li key={item.id}>{item.value}</li>
+            <li key={item.id} onClick={() => this.props.onDeleteOneResult(item.id)}>
+              {item.value}
+            </li>
           ))}
         </ul>
+        <div>
+          <button onClick={this.props.onDeleteResult}>
+            Delete all results
+          </button>
+        </div>
       </div>
     );
   }
@@ -26,20 +35,21 @@ class Counter extends Component {
 
 const mapStateToProps = state => {
   return {
-    counter: state.counter,
-    storedResults: state.results,
+    counter: state.ctr.counter,
+    storedResults: state.res.results,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onIncCounter: () => dispatch({ type: "INCREMENT" }),
-    onDecCounter: () => dispatch({ type: "DECREASE" }),
-    onAddFiveCounter: () => dispatch({ type: "ADDFIVE", value: 5 }),
-    onDecFiveCounter: () => dispatch({ type: "REMOVEFIVE", value: 5 }),
-    onResetCounter: () => dispatch({ type: "RESET" }),
-    onStoreResult: () => dispatch({ type: "STORE_RESULT" }),
-    // onDeleteResult: () => dispatch({ type: "DELETE_RESULT" }),
+    onIncCounter: () => dispatch({ type: actionType.INCREMENT }),
+    onDecCounter: () => dispatch({ type: actionType.DECREASE }),
+    onAddFiveCounter: () => dispatch({ type: actionType.ADDFIVE, value: 5 }),
+    onDecFiveCounter: () => dispatch({ type: actionType.REMOVEFIVE, value: 5 }),
+    onResetCounter: () => dispatch({ type: actionType.RESET }),
+    // onDeleteOneResult: () => dispatch({ type: actionType.DELETE, resultItem: id }),
+    onStoreResult: (result) => dispatch({ type: actionType.STORE_RESULT, result: result }),
+    onDeleteResult: () => dispatch({ type: actionType.DELETE_RESULT }),
   };
 };
 
