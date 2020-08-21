@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { createStore, combineReducers } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 import counter from "./store/counter";
 import results from "./store/results";
@@ -13,7 +14,12 @@ const rootReducer = combineReducers({
   res: results,
 });
 
-const store = createStore(rootReducer);
+const composeEnhancers = composeWithDevTools({
+  trace: true,
+  traceLimit: 25,
+});
+
+const store = createStore(rootReducer, composeEnhancers());
 
 ReactDOM.render(
   <Provider store={store}>
