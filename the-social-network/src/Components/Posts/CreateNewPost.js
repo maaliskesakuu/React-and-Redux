@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 // import Firebase from "firebase";
 import { connect } from "react-redux";
-// import { createPost } from "../../store/actions/postActions";
+import { createPost } from "../../store/actions/postActions";
 
 class CreateNewPost extends Component {
   constructor(props) {
@@ -104,17 +104,13 @@ const mapDispatchToProps = dispatch => {
     //     post: post,
     //   });
     // },
-    createPost: post =>
-      dispatch({
-        type: "CREATE_NEW_POST",
-        post,
-      }),
-    
-    //not working correctly
     // createPost: post =>
-    //   dispatch(
-    //     createPost
-    //   )
+    //   dispatch({
+    //     type: "CREATE_NEW_POST",
+    //     post,
+    //   }),
+
+    createPost: post => dispatch(createPost(post)),
   };
 };
 

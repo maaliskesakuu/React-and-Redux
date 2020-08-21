@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PostSummary from "./PostSummary";
 import { connect } from "react-redux";
-// import { removePosts } from "../../store/actions/postActions";
+import { removePosts } from "../../store/actions/postActions";
 
 class AllPosts extends Component {
   render() {
@@ -29,18 +29,19 @@ const mapStateToProps = state => {
   };
 };
 
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     removePost: () => {
+//       dispatch({ type: "REMOVE_ALL_POSTS" });
+//     },
+//   };
+// };
+
 const mapDispatchToProps = dispatch => {
   return {
-    removePost: () => {
-      dispatch({ type: "REMOVE_ALL_POSTS" });
-    },
+    removePost: () => dispatch(removePosts()),
   };
 };
-
-//not working correctly
-// const mapDispatchToProps = dispatch => {
-//   dispatch(removePosts);
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllPosts);
 
