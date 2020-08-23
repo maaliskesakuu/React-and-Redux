@@ -8,21 +8,22 @@ import Register from "./Components/Auth/Register";
 import PostDetails from "./Components/Posts/PostDetails";
 import CreateNewPost from "./Components/Posts/CreateNewPost";
 import Firebase from "firebase";
+import { FIREBASE_CONFIG as firebaseConfig } from './config/firebaseConfig';
 
-var firebaseConfig = {
-  apiKey: "AIzaSyAUsEs1fxdrTLc1hjVaEDn5HZCi45Cqt6c",
-  authDomain: "social-network-b2d25.firebaseapp.com",
-  databaseURL: "https://social-network-b2d25.firebaseio.com",
-  projectId: "social-network-b2d25",
-  storageBucket: "social-network-b2d25.appspot.com",
-  messagingSenderId: "354221347923",
-  appId: "1:354221347923:web:a2a750235710a56c63e2a6",
-  measurementId: "G-T75GK27XKD",
-};
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAUsEs1fxdrTLc1hjVaEDn5HZCi45Cqt6c",
+//   authDomain: "social-network-b2d25.firebaseapp.com",
+//   databaseURL: "https://social-network-b2d25.firebaseio.com",
+//   projectId: "social-network-b2d25",
+//   storageBucket: "social-network-b2d25.appspot.com",
+//   messagingSenderId: "354221347923",
+//   appId: "1:354221347923:web:a2a750235710a56c63e2a6",
+//   measurementId: "G-T75GK27XKD",
+// };
 
 // Initialize Firebase
 Firebase.initializeApp(firebaseConfig);
-Firebase.analytics();
+// Firebase.analytics();
 
 // const db = Firebase.firestore();
 

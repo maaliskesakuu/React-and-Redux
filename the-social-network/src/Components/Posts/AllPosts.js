@@ -5,8 +5,6 @@ import { removePosts } from "../../store/actions/postActions";
 
 class AllPosts extends Component {
   render() {
-    console.log("Received a state from reducer");
-    console.log(this.props.posts);
     return (
       <div>
         <button className="btn" onClick={this.props.removePost}>
