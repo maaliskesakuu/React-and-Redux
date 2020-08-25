@@ -7,8 +7,8 @@ class Register extends Component {
     this.state = {
       first_name: "",
       last_name: "",
-      email: null,
-      password: null,
+      email: "",
+      password: "",
     };
 
     this.handleValueChange = this.handleValueChange.bind(this);

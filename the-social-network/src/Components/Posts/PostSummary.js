@@ -1,19 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 
-class PostSummary extends Component {
-  render() {
-    return (
-      <div className="card post" style={{padding: "1rem"}}>
-        <div className="card-title" style={{paddingLeft: "0.5rem", paddingRight: "0.5rem"}}>{this.props.post.title}</div>
-        <div className="card-content">
-          {this.props.post.content}
-          {/* <p>{this.props.post.content}</p> */}
-          {/* <p className="grey">{this.props.post.time.toString()}</p>
-        <p className="grey">{this.props.post.uid}</p> */}
-        </div>
+const PostSummary = () => {
+  return (
+    <div className="card z-depth-0">
+      <div className="card-content grey-text text-darken-3">
+        <span className="card-title">Project Title</span>
+        <p>Posted by me</p>
+        <p className="grey-text">3rd September, 2 am</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default PostSummary;

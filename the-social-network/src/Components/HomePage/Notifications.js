@@ -1,17 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Notifications = () => {
   return (
     <div>
-      Notifications
-      <ul className="collection">
-        <li className="collection-item">Alvin</li>
-        <li className="collection-item">Alvin</li>
-        <li className="collection-item">Alvin</li>
-        <li className="collection-item">Alvin</li>
-      </ul>
+      <p>Notifications</p>
     </div>
   );
-}
+};
 
 export default Notifications;

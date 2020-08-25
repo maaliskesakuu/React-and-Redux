@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 const RegisteredUserLinks = () => {
   return (
     <div>
-      <ul id="nav-mobile" className="right hide-on-small-and-down">
-        <li><NavLink to="create">Create New Post</NavLink></li>
+      <ul id="nav-mobile" className="right">
+        <li><NavLink to="/create">Create New Post</NavLink></li>
         <li>
-          <NavLink to="/logout">Logout</NavLink>
+          <NavLink to="/logout">Log out</NavLink>
         </li>
       </ul>
     </div>

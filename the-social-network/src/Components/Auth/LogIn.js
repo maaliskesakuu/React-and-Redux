@@ -5,8 +5,8 @@ class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: null,
-      password: null,
+      email: "",
+      password: "",
       auth: null,
     };
 
@@ -37,14 +37,13 @@ class LogIn extends Component {
       <div className="container">
         <h2>Login</h2>
         <div className="row">
-          <form className="col s12" onSubmit={this.handleSubmission}>
+          <form className="white col s12" onSubmit={this.handleSubmission}>
             <div className="row">
               <div className="input-field col s12">
                 <input
                   id="email"
                   type="email"
                   name="email"
-                  className="validate"
                   onChange={this.handleValueChange}
                 />
                 <label htmlFor="email">Email</label>
@@ -56,7 +55,6 @@ class LogIn extends Component {
                   id="password"
                   type="password"
                   name="password"
-                  className="validate"
                   onChange={this.handleValueChange}
                 />
                 <label htmlFor="password">Password</label>
