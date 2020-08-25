@@ -45,6 +45,7 @@ class CreateNewPost extends Component {
   render() {
     return (
       <div className="container">
+        <h2>Create a New Post</h2>
         {this.state.posted ? <Redirect to="/" /> : ""}
         {!this.props.uid ? (
           <Redirect to="/login/" />

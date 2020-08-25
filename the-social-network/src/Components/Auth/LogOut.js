@@ -12,8 +12,9 @@ const LogOut = () => {
     });
 
   return (
-    <div>
-      <p>You have logged out.</p>
+    <div className="container">
+      <h2 style={{textAlign: "center"}}>Thanks for your visit!</h2>
+      <p style={{textAlign: "center"}}>You have logged out.</p>
     </div>
   );
 };

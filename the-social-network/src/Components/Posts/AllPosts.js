@@ -1,25 +1,47 @@
 import React, { Component } from "react";
 import PostSummary from "./PostSummary";
 import { connect } from "react-redux";
-import { removePosts } from "../../store/actions/postActions";
+import { removePosts, showAllPosts } from "../../store/actions/postActions";
 
 class AllPosts extends Component {
+
+  handleSubmission = e => {
+    e.preventDefault();
+    this.props.showAllPosts()({
+      title: this.props.posts.title,
+      content: this.props.posts.content,
+    });
+  }
+
   render() {
     return (
-      <div>
-        <button className="btn" onClick={this.props.removePost}>
-          Remove all posts
-        </button>
+      <div className="container">
+        <h2>All Posts</h2>
         {this.props.posts
           ? this.props.posts.map(post => (
-              <PostSummary post={post} key={Math.random() * 99} />
-              // <PostSummary post={post} key={post.id} />
+              // <PostSummary post={post} key={Math.random() * 99} />
+              <PostSummary post={post} key={post.id} />
             ))
           : "Loading ..."}
+        <button
+          className="btn"
+          style={{ marginBottom: "0.5rem" }}
+          onClick={this.props.removePost}
+        >
+          Remove all posts
+        </button>
+        <button
+          className="btn"
+          style={{ marginBottom: "0.5rem", marginLeft: "0.5rem"  }}
+          onClick={this.props.showAllPosts}
+        >
+          Show all posts
+        </button>
       </div>
     );
   }
 }
+
 
 const mapStateToProps = state => {
   return {
@@ -38,6 +60,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     removePost: () => dispatch(removePosts()),
+    showAllPosts: () => dispatch(showAllPosts()),
   };
 };
 
