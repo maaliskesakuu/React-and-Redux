@@ -26,8 +26,8 @@ export const showAllPosts = function () {
       .then((resp) => {
         console.log(resp);
         console.log(resp.docs)
-        console.log(resp.docs[0].data())
-        dispatch({ type: "SHOW_ALL_POSTS"});
+        const data = resp.docs[0].data()
+        dispatch({ type: "SHOW_ALL_POSTS", data});
       })
       .catch(err => {
         console.log(err);

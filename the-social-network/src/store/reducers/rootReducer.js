@@ -1,17 +1,18 @@
 // const currentTime = new Date();
 
 const initialState = {
-  posts: [
-    { id: 0, title: 1, content: 1 },
-    { id: 1, title: 2, content: 2 },
-    { id: 2, title: 3, content: 3 },
-  ],
-  // posts: [],
+  // posts: [
+  //   { id: 0, title: 1, content: 1 },
+  //   { id: 1, title: 2, content: 2 },
+  //   { id: 2, title: 3, content: 3 },
+  // ],
+  posts: [],
   userData: {},
   userActionErr: null,
 };
 
 const rootReducer = (state = initialState, action) => {
+
   switch (action.type) {
     case "CREATE_NEW_POST":
       console.log("A new post has been added");
@@ -29,7 +30,8 @@ const rootReducer = (state = initialState, action) => {
       };
     case "SHOW_ALL_POSTS":
       console.log("Hopefully some posts ...");
-      return state;
+      console.log(state)
+      return { ...state, action };
     default:
       return state;
   }
