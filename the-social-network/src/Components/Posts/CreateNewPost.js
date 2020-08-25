@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { createPost } from "../../store/actions/postActions";
 
 class CreateNewPost extends Component {
   constructor(props) {
@@ -19,7 +21,8 @@ class CreateNewPost extends Component {
 
   handleSubmission = e => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createPost(this.state);
   };
 
   render() {
@@ -63,4 +66,10 @@ class CreateNewPost extends Component {
   }
 }
 
-export default CreateNewPost;
+const mapDispatchToProps = dispatch => {
+  return {
+    createPost: post => dispatch(createPost(post)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CreateNewPost);

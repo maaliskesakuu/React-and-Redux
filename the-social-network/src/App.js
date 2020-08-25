@@ -8,10 +8,6 @@ import Register from "./Components/Auth/Register";
 import PostDetails from "./Components/Posts/PostDetails";
 import CreateNewPost from "./Components/Posts/CreateNewPost";
 import Firebase from "firebase";
-import { FIREBASE_CONFIG as firebaseConfig } from "./config/firebaseConfig";
-
-// Initialize Firebase
-Firebase.initializeApp(firebaseConfig);
 
 class App extends Component {
   constructor(props) {

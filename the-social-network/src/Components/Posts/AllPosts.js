@@ -1,13 +1,13 @@
 import React from "react";
 import PostSummary from "./PostSummary";
 
-const AllPosts = () => {
+const AllPosts = ({ posts }) => {
   return (
     <div className="section">
-      <PostSummary />
-      <PostSummary />
-      <PostSummary />
-      <PostSummary />
+      {posts &&
+        posts.map(post => {
+          return <PostSummary post={post} key={post.id} />;
+        })}
     </div>
   );
 };
