@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createPost } from "../../store/actions/postActions";
+import { Redirect } from "react-router-dom";
 
 class CreateNewPost extends Component {
   state = {
@@ -18,6 +19,8 @@ class CreateNewPost extends Component {
   };
 
   render() {
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to="/login" />;
     return (
       <div className="container">
         <h2>Create a New Post</h2>
@@ -58,10 +61,16 @@ class CreateNewPost extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    auth: state.firebase.auth,
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     createPost: post => dispatch(createPost(post)),
   };
 };
 
-export default connect(null, mapDispatchToProps)(CreateNewPost);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateNewPost);

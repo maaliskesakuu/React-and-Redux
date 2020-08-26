@@ -31,9 +31,7 @@ ReactDOM.render(
       dispatch={store.dispatch}
       createFirestoreInstance={createFirestoreInstance}
     >
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById("root")
