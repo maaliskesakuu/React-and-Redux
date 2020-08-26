@@ -7,12 +7,14 @@ import Register from "./components/Auth/Register";
 import LogOut from "./components/Auth/LogOut";
 import CreateNewPost from "./components/Posts/CreateNewPost";
 import PostDetails from "./components/Posts/PostDetails";
+import Feeds from "./components/HomePage/Feeds";
 
 function App() {
   return (
     <Router>
       <NavBar />
       <Switch>
+        <Route exact path="/" component={Feeds}></Route>
         <Route exact path="/register" component={Register}></Route>
         <Route exact path="/login" component={LogIn}></Route>
         <Route exact path="/logout" component={LogOut}></Route>
