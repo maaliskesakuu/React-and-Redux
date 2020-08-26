@@ -1,11 +1,15 @@
 import React from 'react';
+import PostSummary from "./PostSummary";
 
-const AllPosts = () => {
+const AllPosts = ({ posts }) => {
   return (
-    <div>
-      
+    <div className="section">
+      {posts &&
+        posts.map(post => {
+          return <PostSummary post={post} key={post.id} />;
+        })}
     </div>
   );
-}
+};
 
 export default AllPosts;
