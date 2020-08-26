@@ -8,6 +8,10 @@ import LogOut from "./components/Auth/LogOut";
 import CreateNewPost from "./components/Posts/CreateNewPost";
 import PostDetails from "./components/Posts/PostDetails";
 import Feeds from "./components/HomePage/Feeds";
+import Firebase from 'firebase';
+import { FIREBASE_CONFIG as firebaseConfig } from './config/firebaseConfig';
+
+Firebase.initializeApp(firebaseConfig);
 
 function App() {
   return (
