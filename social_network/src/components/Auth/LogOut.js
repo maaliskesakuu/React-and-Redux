@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function LogOut() {
+const LogOut = () => {
   return (
-    <div>
-      
+    <div className="container">
+      <h2 style={{textAlign: "center"}}>Thanks for your visit!</h2>
+      <p style={{textAlign: "center"}}>You have logged out.</p>
     </div>
-  )
-}
+  );
+};
+
+export default LogOut;
 
