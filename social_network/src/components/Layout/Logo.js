@@ -7,7 +7,7 @@ const Logo = () => {
       <Link
         to="/"
         className="brand-logo"
-        style={{ paddingLeft: "15px", paddingRight: "15px" }}
+        style={{ paddingLeft: "1rem", paddingRight: '1rem' }}
       >
         My Logo
       </Link>

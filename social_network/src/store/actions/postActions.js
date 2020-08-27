@@ -3,7 +3,7 @@ export const createPost = post => {
     storeEnhancers
       .getFirestore()
       .collection("posts")
-      .add(post)
+      .add({ ...post, created_at: new Date() })
       .then(() => {
         dispatch({ type: "CREATE_POST", post });
       })

@@ -10,7 +10,20 @@ const RegisteredUserLinks = props => {
         <li>
           <NavLink to="/create">Create New Post</NavLink>
         </li>
-        <li><a onClick={props.signOut}>Log Out</a></li>
+        <li>
+          <button
+            style={{
+              border: 0,
+              color: "white",
+              backgroundColor: "#ee6e73",
+              paddingRight: "1rem",
+              fontSize: '1rem'
+            }}
+            onClick={props.signOut}
+          >
+            Log Out
+          </button>
+        </li>
       </ul>
     </div>
   );

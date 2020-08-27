@@ -16,7 +16,7 @@ class CreateNewPost extends Component {
   handleSubmission = e => {
     e.preventDefault();
     this.props.createPost(this.state);
-    this.props.history.push('/');
+    this.props.history.push("/");
   };
 
   render() {
