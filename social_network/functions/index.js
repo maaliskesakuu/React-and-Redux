@@ -20,7 +20,7 @@ exports.postCreated = functions.firestore
   .onCreate(doc => {
     const post = doc.data();
     const notification = {
-      content: "Added a new post",
+      content: "A new post added",
       time: admin.firestore.FieldValue.serverTimestamp(),
     };
 
