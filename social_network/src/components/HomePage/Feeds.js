@@ -9,16 +9,10 @@ import { Redirect } from "react-router-dom";
 class Feeds extends Component {
   render() {
     const { posts, auth } = this.props;
-    if (!auth.uid) return <Redirect to='/login' />;
+    if (!auth.uid) return <Redirect to="/login" />;
     return (
-      <div
-        style={{
-          backgroundColor: "whitesmoke",
-          minHeight: "100%",
-          paddingBottom: "1rem",
-        }}
-      >
-        <div className="container">
+      <div>
+        <div className="container" style={{paddingTop: '5rem'}}>
           <div className="row">
             <div className="col s12 m6">
               <AllPosts posts={posts} />
