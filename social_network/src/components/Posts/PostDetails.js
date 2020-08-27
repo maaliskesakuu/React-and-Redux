@@ -10,7 +10,7 @@ const PostDetails = props => {
   if (!auth.uid) return <Redirect to="/login" />;
   if (post) {
     return (
-      <div className="container section">
+      <div className="container section" style={{paddingTop: '5rem'}}>
         <div className="card z-depth-o">
           <div className="card-content">
             <span className="card-title">{post.title}</span>
