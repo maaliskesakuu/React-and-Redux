@@ -1,36 +1,14 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import * as actionTypes from "../actions/actions";
+import { increase, decrease, addFive, removeFive, reset } from '../actions/actions';
 
 const Counter = () => {
-  const counter = useSelector(state => state.counter);
+  const counter = useSelector(state => state.counter.counter);
   // if in reducer there is state = 0
   // const counter = useSelector(state => state);
 
   const dispatch = useDispatch();
-
-  const increase = () => ({
-    type: actionTypes.INCREASE,
-  });
-
-  const decrease = () => ({
-    type: actionTypes.DECREASE,
-  });
-
-  const addFive = () => ({
-    type: actionTypes.ADD,
-    value: 5,
-  });
-
-  const removeFive = () => ({
-    type: actionTypes.REMOVE,
-    value: 5,
-  });
-
-  const reset = () => ({
-    type: actionTypes.RESET,
-  });
 
   return (
     <div>
