@@ -9,7 +9,7 @@ const Logo = () => {
         className="brand-logo"
         style={{ paddingLeft: "1rem", paddingRight: '1rem' }}
       >
-        My Logo
+        Keep Up<i className="material-icons right">dynamic_feed</i>
       </Link>
     </div>
   );

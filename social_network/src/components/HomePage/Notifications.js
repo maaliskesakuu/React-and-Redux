@@ -6,9 +6,8 @@ const Notifications = props => {
   return (
     <div
       className="section"
-      style={{ border: "1px solid #333", borderRadius: "3px" }}
     >
-      <div className="card z-depth-0">
+      <div className="card z-depth-5">
         <div className="card-content">
           <span className="card-title">Notifications</span>
           <ul>
@@ -16,11 +15,12 @@ const Notifications = props => {
               notifications.map(item => {
                 return (
                   <li key={item.id}>
-                    <span className="green-text">{item.user} </span>
+                    <span className="green-text text-darken-4">{item.user} </span>
                     <span>{item.content}</span>
-                    <div className="grey-text note-date">
+                    <div className="grey-text text-darken-3">
                       {moment(item.time.toDate()).fromNow()}
                     </div>
+                    <div className="divider"></div>
                   </li>
                 );
               })}

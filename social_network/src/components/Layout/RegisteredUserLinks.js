@@ -16,7 +16,7 @@ const RegisteredUserLinks = props => {
               border: 0,
               color: "white",
               backgroundColor: "#333",
-              paddingRight: "1rem",
+              marginRight: "1rem",
               fontSize: '1rem'
             }}
             onClick={props.signOut}

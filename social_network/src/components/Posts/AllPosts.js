@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const AllPosts = ({ posts }) => {
   return (
-    <div className="section" style={{border: "1px solid #333", borderRadius: "3px"}}>
+    <div className="section">
       {posts &&
         posts.map(post => {
           return (
