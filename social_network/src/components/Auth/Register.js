@@ -85,7 +85,7 @@ class Register extends Component {
             </button>
             <div className="section">
               <span>Already registered?</span>{' '}
-              <Link to="/login" style={{ textDecoration: "underline" }}>Login</Link>
+              <Link to="/login" style={{ textDecoration: "underline", color: '#1d7d74' }}>Login</Link>
             </div>
             <div className="red-text center">
               {authError ? <p>{authError}</p> : null}

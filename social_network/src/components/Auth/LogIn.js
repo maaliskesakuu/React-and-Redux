@@ -59,7 +59,7 @@ class LogIn extends Component {
             </button>
             <div className="section">
               <span>Not registered yet?</span>{' '}
-              <Link to="/register" style={{ textDecoration: "underline"}}>Register</Link>
+              <Link to="/register" style={{ textDecoration: "underline", color: '#1d7d74'}}>Register</Link>
             </div>
             <div className="red-text center">
               {authError ? <p>{authError}</p> : null}

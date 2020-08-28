@@ -8,12 +8,12 @@ import moment from "moment";
 const PostDetails = props => {
   const { post, auth } = props;
 
-  const authorId = post.authorId;
-
-  const shortenedAuthorId = authorId.substring(0, 5).concat("...");
-
   if (!auth.uid) return <Redirect to="/login" />;
   if (post) {
+    const authorId = post.authorId;
+
+    const shortenedAuthorId = authorId.substring(0, 5).concat("...");
+
     return (
       <div className="container section" style={{ paddingTop: "5rem" }}>
         <div className="card z-depth-5">
@@ -30,6 +30,14 @@ const PostDetails = props => {
             </div>
           </div>
         </div>
+          <button
+              className="btn waves-effect waves-light"
+              type="submit"
+              name="action"
+            >
+              Back to Front Page
+              <i className="material-icons right">send</i>
+            </button>
       </div>
     );
   } else {
