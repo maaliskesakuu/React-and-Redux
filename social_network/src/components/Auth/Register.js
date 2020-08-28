@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { signUp } from "../../store/actions/authActions";
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   state = {
@@ -24,7 +25,7 @@ class Register extends Component {
     const { auth, authError } = this.props;
     if (auth.uid) return <Redirect to="/" />;
     return (
-      <div className="container">
+      <div className="container" style={{ paddingTop: "5rem" }}>        
         <h2>Register</h2>
         <div className="row">
           <form className="col s12" onSubmit={this.handleSubmission}>
@@ -82,6 +83,10 @@ class Register extends Component {
               Submit
               <i className="material-icons right">send</i>
             </button>
+            <div className="section">
+              <span>Already registered?</span>{' '}
+              <Link to="/login" style={{ textDecoration: "underline" }}>Login</Link>
+            </div>
             <div className="red-text center">
               {authError ? <p>{authError}</p> : null}
             </div>

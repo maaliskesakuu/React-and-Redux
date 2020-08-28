@@ -23,7 +23,7 @@ class CreateNewPost extends Component {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to="/login" />;
     return (
-      <div className="container">
+      <div className="container" style={{ paddingTop: "5rem" }}>
         <h2>Create a New Post</h2>
         <div className="row">
           <form className="col s12" onSubmit={this.handleSubmission}>

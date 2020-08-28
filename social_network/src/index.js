@@ -23,11 +23,16 @@ const store = createStore(
   )
 );
 
+const profileSpecificProps = { useFirestoreForProfile: true, userProfile: 'users' };
+
+const newFirebaseConfig = Object.assign(firebaseConfig, profileSpecificProps);
+
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider
       firebase={firebase}
-      config={firebaseConfig}
+      // config={firebaseConfig}
+      config={newFirebaseConfig}
       dispatch={store.dispatch}
       createFirestoreInstance={createFirestoreInstance}
     >

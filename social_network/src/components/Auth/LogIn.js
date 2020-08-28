@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class LogIn extends Component {
   state = {
@@ -22,10 +23,10 @@ class LogIn extends Component {
     const { authError, auth } = this.props;
     if (auth.uid) return <Redirect to="/" />;
     return (
-      <div className="container">
+      <div className="container" style={{ paddingTop: "5rem" }}>
         <h2>Login</h2>
         <div className="row">
-          <form className="white col s12" onSubmit={this.handleSubmission}>
+          <form className="col s12" onSubmit={this.handleSubmission}>
             <div className="row">
               <div className="input-field col s12">
                 <input
@@ -56,6 +57,10 @@ class LogIn extends Component {
               Submit
               <i className="material-icons right">send</i>
             </button>
+            <div className="section">
+              <span>Not registered yet?</span>{' '}
+              <Link to="/register" style={{ textDecoration: "underline"}}>Register</Link>
+            </div>
             <div className="red-text center">
               {authError ? <p>{authError}</p> : null}
             </div>

@@ -15,9 +15,15 @@ class Feeds extends Component {
         <div className="container" style={{ paddingTop: "5rem" }}>
           <div className="row">
             <div className="col s12 m6">
+              <div className="section">
+                <i className="material-icons right">dynamic_feed</i>
+              </div>
               <AllPosts posts={posts} />
             </div>
             <div className="col s12 m5 offset-m1">
+            <div className="section">
+        <i className="material-icons right">announcement</i>
+      </div>
               <Notifications notifications={notifications} />
             </div>
           </div>

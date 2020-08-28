@@ -7,9 +7,9 @@ const Logo = () => {
       <Link
         to="/"
         className="brand-logo"
-        style={{ paddingLeft: "1rem", paddingRight: '1rem' }}
+        style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
       >
-        Keep Up<i className="material-icons right">dynamic_feed</i>
+        <i className="material-icons right">dynamic_feed</i>
       </Link>
     </div>
   );
