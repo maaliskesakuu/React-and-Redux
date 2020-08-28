@@ -7,6 +7,11 @@ import moment from "moment";
 
 const PostDetails = props => {
   const { post, auth } = props;
+
+  const authorId = post.authorId;
+
+  const shortenedAuthorId = authorId.substring(0, 5).concat("...");
+
   if (!auth.uid) return <Redirect to="/login" />;
   if (post) {
     return (
@@ -18,7 +23,7 @@ const PostDetails = props => {
           </div>
           <div className="card-action grey lighten-4 grey-text text-darken-1">
             <div className="card-text text-darken-1">
-              <div>Posted by {post.authorId}</div>
+              <div>Posted by {shortenedAuthorId}</div>
               <div>
                 {moment(post.created_at.toDate().toString()).calendar()}
               </div>
