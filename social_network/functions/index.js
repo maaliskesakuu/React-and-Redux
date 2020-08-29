@@ -19,8 +19,11 @@ exports.postCreated = functions.firestore
   .document("posts/{postId}")
   .onCreate(doc => {
     const post = doc.data();
+    const authorId = post.authorId;
+    const shortenedAuthorId = authorId.substring(0, 5).concat("...");
     const notification = {
-      content: "A new post added",
+      content: "Added a new post",
+      user: shortenedAuthorId,
       time: admin.firestore.FieldValue.serverTimestamp(),
     };
 

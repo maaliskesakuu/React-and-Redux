@@ -8,7 +8,7 @@ const RegisteredUserLinks = props => {
     <div>
       <ul id="nav-mobile" className="right">
         <li>
-          <NavLink to="/create">Create New Post</NavLink>
+          <NavLink to="/create">Add Post</NavLink>
         </li>
         <li>
           <button

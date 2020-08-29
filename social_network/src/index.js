@@ -31,7 +31,6 @@ ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider
       firebase={firebase}
-      // config={firebaseConfig}
       config={newFirebaseConfig}
       dispatch={store.dispatch}
       createFirestoreInstance={createFirestoreInstance}
