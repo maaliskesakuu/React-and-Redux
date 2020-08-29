@@ -8,7 +8,7 @@ const NavBar = props => {
   const { auth } = props;
   const links = auth.uid ? <RegisteredUserLinks /> : <NonRegisteredUserLinks />;
   return (
-    <nav style={{ backgroundColor: "#333" }}>
+    <nav style={{ backgroundColor: "#906C84" }}>
       <div className="nav-wrapper">
         <Logo />
         <ul id="nav-mobile" className="right">

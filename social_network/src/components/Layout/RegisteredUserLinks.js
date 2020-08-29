@@ -15,7 +15,7 @@ const RegisteredUserLinks = props => {
             style={{
               border: 0,
               color: "white",
-              backgroundColor: "#333",
+              backgroundColor: "#906C84",
               marginRight: "1rem",
               fontSize: "1rem",
             }}

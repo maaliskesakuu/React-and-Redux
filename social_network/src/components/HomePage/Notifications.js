@@ -5,7 +5,7 @@ const Notifications = props => {
   const { notifications } = props;
   return (
     <div className="section">
-      <div className="card z-depth-5">
+      <div className="card z-depth-2">
         <div className="card-content">
           <span className="card-title">What's New</span>
           <ul>

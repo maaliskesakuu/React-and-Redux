@@ -4,6 +4,7 @@ import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 import moment from "moment";
+import { Link } from 'react-router-dom';
 
 const PostDetails = props => {
   const { post, auth } = props;
@@ -16,7 +17,7 @@ const PostDetails = props => {
 
     return (
       <div className="container section" style={{ paddingTop: "5rem" }}>
-        <div className="card z-depth-5">
+        <div className="card z-depth-2">
           <div className="card-content">
             <span className="card-title">{post.title}</span>
             <p>{post.content}</p>
@@ -29,15 +30,13 @@ const PostDetails = props => {
               </div>
             </div>
           </div>
-        </div>
+        </div><Link to="/">
           <button
               className="btn waves-effect waves-light"
-              type="submit"
-              name="action"
             >
               Back to Front Page
               <i className="material-icons right">send</i>
-            </button>
+            </button></Link>
       </div>
     );
   } else {

@@ -5,11 +5,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #FFE5FF;
   min-height: 100%;
 }
 
 h2 {
   font-size: 2.5rem;
+}
+
+.input-field > label  {
+ color: black;
 }
