@@ -16,5 +16,14 @@ h2 {
 }
 
 .input-field > label  {
- color: black;
+ color: #333;
+}
+
+
+form {
+  background-color: white;
+}
+
+form > .btn {
+  margin-bottom : 1rem;
 }

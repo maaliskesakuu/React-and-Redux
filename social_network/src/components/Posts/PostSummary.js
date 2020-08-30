@@ -14,7 +14,12 @@ const PostSummary = ({ post }) => {
         <p className="grey-text text-darken-1">
           {moment(post.created_at.toDate().toString()).calendar()}
         </p>
-      <div className="section green-text text-darken-4">Click to see more</div>
+        <button
+          className="btn waves-effect waves-light"
+          style={{ marginTop: "1rem" }}
+        >
+          See the post<i className="material-icons right">arrow_forward</i>
+        </button>
       </div>
     </div>
   );

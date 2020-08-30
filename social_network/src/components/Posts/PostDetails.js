@@ -35,7 +35,7 @@ const PostDetails = props => {
               className="btn waves-effect waves-light"
             >
               Back to Front Page
-              <i className="material-icons right">send</i>
+              <i className="material-icons right">first_page</i>
             </button></Link>
       </div>
     );
