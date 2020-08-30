@@ -22,8 +22,9 @@ const reducer = (state = initialState, action) => {
       };
     case actionTypes.RESET:
       return {
-        ...state, counter: 0
-      }
+        ...state,
+        counter: 0,
+      };
     default:
       return state;
   }
@@ -31,6 +32,7 @@ const reducer = (state = initialState, action) => {
 
 const initialState = {
   counter: 0,
+  notes: 'no notes'
 };
 
 export default reducer;

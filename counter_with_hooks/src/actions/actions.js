@@ -4,7 +4,7 @@ export const ADD = "ADD";
 export const REMOVE = "REMOVE";
 export const RESET = "RESET";
 export const STORE_RESULTS = "STORE_RESULTS";
-export const DELETE_RESULTS = "DELETE_RESULTS";
+export const REMOVE_RESULTS = "REMOVE_RESULTS";
 
 const increase = () => ({
   type: INCREASE,
@@ -28,13 +28,22 @@ const reset = () => ({
   type: RESET,
 });
 
-const storeResult = () => ({
+const storeResult = currentState => ({
   type: STORE_RESULTS,
+  exportedResult: currentState,
 });
 
-const deleteResult = (currentState) => ({
-  type: DELETE_RESULTS,
-  currentState
+const removeResult = id => ({
+  type: REMOVE_RESULTS,
+  id: id,
 });
 
-export { increase, decrease, addFive, removeFive, reset, storeResult, deleteResult };
+export {
+  increase,
+  decrease,
+  addFive,
+  removeFive,
+  reset,
+  storeResult,
+  removeResult,
+};

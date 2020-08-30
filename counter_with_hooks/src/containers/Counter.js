@@ -8,11 +8,14 @@ const Counter = () => {
   // if in reducer there is state = 0
   // const counter = useSelector(state => state);
 
+  const notes = useSelector(state => state.counter.notes);
+
   const dispatch = useDispatch();
 
   return (
     <div>
       <h1>Counts: {counter}</h1>
+      <h1>Notes: {notes}</h1>
       <button onClick={() => dispatch(increase())}>Increase one</button>
       <button onClick={() => dispatch(decrease())}>Decrease one</button>
       <button onClick={() => dispatch(addFive())}>Add five</button>

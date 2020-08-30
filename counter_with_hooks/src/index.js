@@ -8,10 +8,10 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import counterReducer from "./reducers/counterReducer";
 import resultsReducer from "./reducers/resultsReducer";
 
-const rootReducer = combineReducers(
-  { counter: counterReducer },
-  { results: resultsReducer }
-);
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  results: resultsReducer,
+});
 
 const store = createStore(rootReducer, composeWithDevTools());
 
