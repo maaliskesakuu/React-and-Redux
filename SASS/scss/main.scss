@@ -1,0 +1,50 @@
+@import "variables";
+@import "functions";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light-color;
+  font-family: $font-stack;
+}
+
+a {
+  color: $dark-color;
+  &:hover {
+    color: $light-color;
+    @include transition(all 2s ease);
+  }
+}
+
+header {
+  background-color: $dark-color;
+  padding: 2rem;
+
+  h1 {
+    color: $primary-color;
+  }
+  p {
+    color: $light-color;
+  }
+}
+
+.section {
+  min-height: 50vh;
+  padding: 2rem;
+  &-a {
+    background-color: $primary-color;
+    h2 {
+      color: $dark-color;
+    }
+  }
+  &-b {
+    background-color: $secondary-color;
+    h2 {
+      color: $light-color;
+    }
+  }
+}
