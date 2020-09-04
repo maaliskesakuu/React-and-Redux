@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "text": "the app state is in redux store",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "text": "state changes are made with actions",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "text": "lll njnonpo njnjp nijon jniun  npi",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}
