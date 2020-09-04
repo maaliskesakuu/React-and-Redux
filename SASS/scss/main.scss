@@ -48,3 +48,31 @@ header {
     }
   }
 }
+
+// does not display in CSS
+%btn-shared {
+  display: inline-block;
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn {
+  &-light{
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: $dark-color;
+    &:hover{
+      background: darken($light-color, 70%);
+    }
+  }
+  &-dark{
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: $light-color;
+    &:hover{
+    background: lighten($dark-color, 10%);
+    }
+  }
+}
