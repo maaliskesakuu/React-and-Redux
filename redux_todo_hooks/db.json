@@ -1,7 +1,7 @@
 {
   "notes": [
     {
-      "text": "the app state is in redux store",
+      "text": "the app state is in the redux store",
       "completed": true,
       "id": 1
     },

@@ -5,7 +5,7 @@ import Notes from "./containers/Notes";
 import { initNotes } from "./store/reducers/reducer";
 import { useDispatch } from "react-redux";
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
