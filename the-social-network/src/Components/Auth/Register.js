@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Firebase from "firebase";
+// import Firebase from "firebase";
 
 class Register extends Component {
   constructor(props) {
@@ -23,33 +23,33 @@ class Register extends Component {
   handleSubmission = e => {
     e.preventDefault();
 
-    Firebase.auth()
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(resp => {
-        Firebase.firestore()
-          .collection("users")
-          .doc(resp.user.uid)
-          .set({
-            firstname: this.state.first_name,
-            lastname: this.state.last_name,
-            email: this.state.email,
-          })
-          .then(() => {
-            console.log("Register success");
-            console.log(resp.user.uid);
-          });
-      })
-      .catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode === "auth/weak-password") {
-          alert("The password is too weak.");
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-      });
+    // Firebase.auth()
+    //   .createUserWithEmailAndPassword(this.state.email, this.state.password)
+    //   .then(resp => {
+    //     Firebase.firestore()
+    //       .collection("users")
+    //       .doc(resp.user.uid)
+    //       .set({
+    //         firstname: this.state.first_name,
+    //         lastname: this.state.last_name,
+    //         email: this.state.email,
+    //       })
+    //       .then(() => {
+    //         console.log("Register success");
+    //         console.log(resp.user.uid);
+    //       });
+    //   })
+    //   .catch(function (error) {
+    //     // Handle Errors here.
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     if (errorCode === "auth/weak-password") {
+    //       alert("The password is too weak.");
+    //     } else {
+    //       alert(errorMessage);
+    //     }
+    //     console.log(error);
+    //   });
   };
 
   render() {

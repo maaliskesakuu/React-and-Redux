@@ -5,9 +5,9 @@ class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
-      auth: null,
+      email: ""
+      // ,password: "",
+      // auth: null,
     };
 
     this.handleSubmission = this.handleSubmission.bind(this);
@@ -22,14 +22,14 @@ class LogIn extends Component {
   handleSubmission = e => {
     e.preventDefault();
 
-    Firebase.auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(() => {
-        console.log("Login success");
-      })
-      .catch(err => {
-        console.log("Login fail: " + err);
-      });
+    // Firebase.auth()
+    //   .signInWithEmailAndPassword(this.state.email, this.state.password)
+    //   .then(() => {
+    //     console.log("Login success");
+    //   })
+    //   .catch(err => {
+    //     console.log("Login fail: " + err);
+    //   });
   };
 
   render() {
