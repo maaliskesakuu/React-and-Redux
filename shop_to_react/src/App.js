@@ -1,25 +1,30 @@
 import React from "react";
-import Topbar from "./components/layout/Topbar/Topbar";
-import Navbar from "./components/layout/Navbar/Navbar";
-import Carousel from "./components/layout/Carousel";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import Homepage from "./components/homepage/Homepage";
+import Detailpage from "./components/detailpage/Detailpage";
+
+import Topbar from './components/layout/Topbar/Topbar';
+import Navbar from './components/layout/Navbar/Navbar';
+import Carousel from './components/layout/Carousel';
 import Advantages from './components/layout/Advantages';
-import Slideshow from './components/layout/Slideshow';
-import Blog from './components/layout/Blog';
 import Footer from './components/layout/Footer';
-import Copyright from './components/layout/Copyright'
+import Copyright from './components/layout/Copyright';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Topbar />
       <Navbar />
       <Carousel />
       <Advantages />
-      <Slideshow />
-      <Blog />
+      <Switch>
+        <Route exact path="/" component={Homepage}></Route>
+        <Route path="/detailpage" component={Detailpage}></Route>
+      </Switch>
       <Footer />
       <Copyright />
-    </div>
+    </Router>
   );
 }
 
