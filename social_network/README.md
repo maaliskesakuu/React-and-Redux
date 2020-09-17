@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The purpose of this school task was to learn React, Redux and Firebase. I finished the task with the help of a tutorial called React, Redux & Firebase App Tutorial by NetNinja.
+
 ## Available Scripts
 
 In the project directory, you can run:
