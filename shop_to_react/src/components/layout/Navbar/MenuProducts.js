@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class MenuProducts extends Component {
   render() {
@@ -6,9 +7,9 @@ class MenuProducts extends Component {
         <div id="navigation" className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a href="#" className="nav-link active">
+            <Link to="/" className="nav-link active">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item dropdown menu-large">
             <a

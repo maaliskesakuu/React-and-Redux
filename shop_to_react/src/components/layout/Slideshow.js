@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class Slideshow extends Component {
   render() {
@@ -20,29 +21,29 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product1.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product1_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product1.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">
+                    <Link to="/detailpage">
                       Fur coat with very but very very long name
-                    </a>
+                    </Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00
@@ -67,27 +68,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product2.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product2_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product2.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">White Blouse Armani</a>
+                    <Link to="/detailpage">White Blouse Armani</Link>
                   </h3>
                   <p className="price">
                     <del>$280</del>$143.00
@@ -112,27 +113,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product3.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product3_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product3.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">Black Blouse Versace</a>
+                    <Link to="/detailpage">Black Blouse Versace</Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00
@@ -145,27 +146,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product3.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product3_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product3.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">Black Blouse Versace</a>
+                    <Link to="/detailpage">Black Blouse Versace</Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00
@@ -178,27 +179,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product2.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product2_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product2.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">White Blouse Versace</a>
+                    <Link to="/detailpage">White Blouse Versace</Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00
@@ -215,27 +216,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product1.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product1_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product1.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">Fur coat</a>
+                    <Link to="/detailpage">Fur coat</Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00
@@ -252,27 +253,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product2.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product2_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product2.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">White Blouse Armani</a>
+                    <Link to="/detailpage">White Blouse Armani</Link>
                   </h3>
                   <p className="price">
                     <del>$280</del>$143.00
@@ -297,27 +298,27 @@ class Slideshow extends Component {
                 <div className="flip-container">
                   <div className="flipper">
                     <div className="front">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img src="img/product3.jpg" alt="" className="img-fluid" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="back">
-                      <a href="detail.html">
+                      <Link to="/detailpage">
                         <img
                           src="img/product3_2.jpg"
                           alt=""
                           className="img-fluid"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <a href="detail.html" className="invisible">
+                <Link to="/detailpage" className="invisible">
                   <img src="img/product3.jpg" alt="" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="text">
                   <h3>
-                    <a href="detail.html">Black Blouse Versace</a>
+                    <Link to="/detailpage">Black Blouse Versace</Link>
                   </h3>
                   <p className="price">
                     <del></del>$143.00

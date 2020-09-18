@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class Logo extends Component {
   render() {
     return (
       <div>
-        <a href="index.html" className="navbar-brand home">
+        <Link to="/" className="navbar-brand home">
           <img
             src="img/logo.png"
             alt="Obaju logo"
@@ -16,7 +17,7 @@ class Logo extends Component {
             className="d-inline-block d-md-none"
           />
           <span className="sr-only">Obaju - go to homepage</span>
-        </a>
+        </Link>
       </div>
     );
   }
