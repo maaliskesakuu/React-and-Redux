@@ -5,7 +5,7 @@ import Blog from "../layout/Blog";
 class Homepage extends Component {
   render() {
     return (
-      <div>
+      <div id="content">
         <Slideshow />
         <Blog />
       </div>

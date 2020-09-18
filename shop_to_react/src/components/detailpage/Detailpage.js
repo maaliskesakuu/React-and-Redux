@@ -4,7 +4,7 @@ import Detail from '../product/Detail';
 class Detailpage extends Component {
     render() {
         return (
-            <div>
+            <div id="content">
                 <Detail />
             </div>
         );
