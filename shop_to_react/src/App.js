@@ -20,7 +20,7 @@ class App extends Component {
   }
   render() {
     return (
-      <>
+      <div id="all">
         <Topbar />
         <Navbar />
         <Carousel />
@@ -31,9 +31,9 @@ class App extends Component {
         </Switch>
         <Footer />
         <Copyright />
-      </>
+      </div>
     );
   }
 }
 
-export default withRouter(props => <App {...props}/>);
+export default withRouter(props => <App {...props} />);

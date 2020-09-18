@@ -4,193 +4,202 @@ class Detail extends Component {
   render() {
     return (
       <div>
-        <div className="card sidebar-menu mb-4">
-          <div className="card-header">
-            <h3 className="h4 card-title">Categories</h3>
+        <div className="col-lg-3 order-2 order-lg-1">
+          <div className="card sidebar-menu mb-4">
+            <div className="card-header">
+              <h3 className="h4 card-title">Categories</h3>
+            </div>
+            <div className="card-body">
+              <ul className="nav nav-pills flex-column category-menu">
+                <li>
+                  <a href="category.html" className="nav-link">
+                    Men <span className="badge badge-secondary">42</span>
+                  </a>
+                  <ul className="list-unstyled">
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        T-shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Pants
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Accessories
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="category.html" className="nav-link active">
+                    Ladies <span className="badge badge-light">123</span>
+                  </a>
+                  <ul className="list-unstyled">
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        T-shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Skirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Pants
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Accessories
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="category.html" className="nav-link">
+                    Kids <span className="badge badge-secondary">11</span>
+                  </a>
+                  <ul className="list-unstyled">
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        T-shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Skirts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Pants
+                      </a>
+                    </li>
+                    <li>
+                      <a href="category.html" className="nav-link">
+                        Accessories
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="card-body">
-            <ul className="nav nav-pills flex-column category-menu">
-              <li>
-                <a href="category.html" className="nav-link">
-                  Men <span className="badge badge-secondary">42</span>
+          <div className="card sidebar-menu mb-4">
+            <div className="card-header">
+              <h3 className="h4 card-title">
+                Brands{" "}
+                <a href="#" className="btn btn-sm btn-danger pull-right">
+                  <i className="fa fa-times-circle"></i> Clear
                 </a>
-                <ul className="list-unstyled">
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      T-shirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Shirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Pants
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Accessories
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="category.html" className="nav-link active">
-                  Ladies <span className="badge badge-light">123</span>
+              </h3>
+            </div>
+            <div className="card-body">
+              <form>
+                <div className="form-group">
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" /> Armani (10)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" /> Versace (12)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" /> Carlo Bruni (15)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" /> Jack Honey (14)
+                    </label>
+                  </div>
+                </div>
+                <button className="btn btn-default btn-sm btn-primary">
+                  <i className="fa fa-pencil"></i> Apply
+                </button>
+              </form>
+            </div>
+          </div>
+          <div className="card sidebar-menu mb-4">
+            <div className="card-header">
+              <h3 className="h4 card-title">
+                Colours{" "}
+                <a href="#" className="btn btn-sm btn-danger pull-right">
+                  <i className="fa fa-times-circle"></i> Clear
                 </a>
-                <ul className="list-unstyled">
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      T-shirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Skirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Pants
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Accessories
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="category.html" className="nav-link">
-                  Kids <span className="badge badge-secondary">11</span>
-                </a>
-                <ul className="list-unstyled">
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      T-shirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Skirts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Pants
-                    </a>
-                  </li>
-                  <li>
-                    <a href="category.html" className="nav-link">
-                      Accessories
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              </h3>
+            </div>
+            <div className="card-body">
+              <form>
+                <div className="form-group">
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" />
+                      <span className="colour white"></span> White (14)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" />
+                      <span className="colour blue"></span> Blue (10)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" />
+                      <span className="colour green"></span> Green (20)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" />
+                      <span className="colour yellow"></span> Yellow (13)
+                    </label>
+                  </div>
+                  <div className="checkbox">
+                    <label>
+                      <input type="checkbox" />
+                      <span className="colour red"></span> Red (10)
+                    </label>
+                  </div>
+                </div>
+                <button className="btn btn-default btn-sm btn-primary">
+                  <i className="fa fa-pencil"></i> Apply
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-        <div className="card sidebar-menu mb-4">
-          <div className="card-header">
-            <h3 className="h4 card-title">
-              Brands{" "}
-              <a href="#" className="btn btn-sm btn-danger pull-right">
-                <i className="fa fa-times-circle"></i> Clear
-              </a>
-            </h3>
+          <div className="banner">
+            <a href="#">
+              <img
+                src="img/banner.jpg"
+                alt="sales 2014"
+                className="img-fluid"
+              />
+            </a>
           </div>
-          <div className="card-body">
-            <form>
-              <div className="form-group">
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" /> Armani (10)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" /> Versace (12)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" /> Carlo Bruni (15)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" /> Jack Honey (14)
-                  </label>
-                </div>
-              </div>
-              <button className="btn btn-default btn-sm btn-primary">
-                <i className="fa fa-pencil"></i> Apply
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="card sidebar-menu mb-4">
-          <div className="card-header">
-            <h3 className="h4 card-title">
-              Colours{" "}
-              <a href="#" className="btn btn-sm btn-danger pull-right">
-                <i className="fa fa-times-circle"></i> Clear
-              </a>
-            </h3>
-          </div>
-          <div className="card-body">
-            <form>
-              <div className="form-group">
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" />
-                    <span className="colour white"></span> White (14)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" />
-                    <span className="colour blue"></span> Blue (10)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" />
-                    <span className="colour green"></span> Green (20)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" />
-                    <span className="colour yellow"></span> Yellow (13)
-                  </label>
-                </div>
-                <div className="checkbox">
-                  <label>
-                    <input type="checkbox" />
-                    <span className="colour red"></span> Red (10)
-                  </label>
-                </div>
-              </div>
-              <button className="btn btn-default btn-sm btn-primary">
-                <i className="fa fa-pencil"></i> Apply
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="banner">
-          <a href="#">
-            <img src="img/banner.jpg" alt="sales 2014" className="img-fluid" />
-          </a>
         </div>
         <div className="col-lg-9 order-1 order-lg-2">
           <div id="productMain" className="row">
             <div className="col-md-6">
-              <div data-slider-id="1" className="owl-carousel shop-detail-carousel">
+              <div
+                data-slider-id="1"
+                className="owl-carousel shop-detail-carousel"
+              >
                 <div className="item">
                   {" "}
                   <img src="img/detailbig1.jpg" alt="" className="img-fluid" />
@@ -233,13 +242,25 @@ class Detail extends Component {
               </div>
               <div data-slider-id="1" className="owl-thumbs">
                 <button className="owl-thumb-item">
-                  <img src="img/detailsquare.jpg" alt="" className="img-fluid" />
+                  <img
+                    src="img/detailsquare.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
                 </button>
                 <button className="owl-thumb-item">
-                  <img src="img/detailsquare2.jpg" alt="" className="img-fluid" />
+                  <img
+                    src="img/detailsquare2.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
                 </button>
                 <button className="owl-thumb-item">
-                  <img src="img/detailsquare3.jpg" alt="" className="img-fluid" />
+                  <img
+                    src="img/detailsquare3.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
                 </button>
               </div>
             </div>
@@ -302,12 +323,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product2_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product2_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
@@ -327,12 +356,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product1.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product1.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product1_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product1_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
@@ -352,12 +389,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product3.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product3.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product3_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product3_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
@@ -384,12 +429,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product2_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product2_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
@@ -409,12 +462,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product1.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product1.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product1_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product1_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
@@ -434,12 +495,20 @@ class Detail extends Component {
                 <div className="flipper">
                   <div className="front">
                     <a href="detail.html">
-                      <img src="img/product3.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product3.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                   <div className="back">
                     <a href="detail.html">
-                      <img src="img/product3_2.jpg" alt="" className="img-fluid" />
+                      <img
+                        src="img/product3_2.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
                     </a>
                   </div>
                 </div>
