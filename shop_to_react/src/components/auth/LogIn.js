@@ -6,7 +6,7 @@ class LogIn extends Component {
       <>
         <div
           id="login-modal"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="Login"
           aria-hidden="true"

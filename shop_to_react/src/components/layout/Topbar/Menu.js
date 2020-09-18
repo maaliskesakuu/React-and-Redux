@@ -5,7 +5,7 @@ class Menu extends Component {
     return (
       <>
         <div className="col-lg-6 text-center text-lg-right">
-          <ul class="menu list-inline mb-0">
+          <ul className="menu list-inline mb-0">
             <li className="list-inline-item">
               <a href="#" data-toggle="modal" data-target="#login-modal">
                 Login

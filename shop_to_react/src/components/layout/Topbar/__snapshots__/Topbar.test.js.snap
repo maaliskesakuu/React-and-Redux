@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  id="top"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 offer mb-3 mb-lg-0"
+      >
+        <a
+          className="btn btn-success btn-sm"
+          href="#"
+        >
+          Offer of the day
+        </a>
+        <a
+          className="ml-1"
+          href="#"
+        >
+          Get flat 35% off on orders over $50!
+        </a>
+      </div>
+      <div
+        className="col-lg-6 text-center text-lg-right"
+      >
+        <ul
+          className="menu list-inline mb-0"
+        >
+          <li
+            className="list-inline-item"
+          >
+            <a
+              data-target="#login-modal"
+              data-toggle="modal"
+              href="#"
+            >
+              Login
+            </a>
+          </li>
+          <li
+            className="list-inline-item"
+          >
+            <a
+              href="register.html"
+            >
+              Register
+            </a>
+          </li>
+          <li
+            className="list-inline-item"
+          >
+            <a
+              href="contact.html"
+            >
+              Contact
+            </a>
+          </li>
+          <li
+            className="list-inline-item"
+          >
+            <a
+              href="#"
+            >
+              Recently viewed
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-labelledby="Login"
+    className="modal fade"
+    id="login-modal"
+    role="dialog"
+    tabIndex="-1"
+  >
+    <div
+      className="modal-dialog modal-sm"
+    >
+      <div
+        className="modal-header"
+      >
+        <h5
+          className="modal-title"
+        >
+          Customer login
+        </h5>
+        <button
+          aria-label="Close"
+          className="close"
+          data-dismiss="modal"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+      </div>
+      <div
+        className="modal-body bg-dark"
+      >
+        <form
+          action="customer-orders.html"
+          method="post"
+        >
+          <div
+            className="form-group"
+          >
+            <input
+              className="form-control"
+              id="email-modal"
+              placeholder="email"
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <input
+              className="form-control"
+              id="password-modal"
+              placeholder="password"
+              type="password"
+            />
+          </div>
+          <p
+            className="text-center"
+          >
+            <button
+              className="btn btn-primary"
+            >
+              <i
+                className="fa fa-sign-in"
+              />
+               Log in
+            </button>
+          </p>
+        </form>
+        <p
+          className="text-center text-muted"
+        >
+          Not registered yet?
+        </p>
+        <p
+          className="text-center text-muted"
+        >
+          <a
+            href="register.html"
+          >
+            <strong>
+              Register now
+            </strong>
+          </a>
+          ! It is easy and done in 1 minute and gives you access to special discounts and much more!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

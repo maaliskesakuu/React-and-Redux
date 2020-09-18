@@ -1,59 +1,5 @@
-$(".box-footer [type='submit']").click(function () {
-  $("document").trigger("conversion");
-});
-
 $(function () {
-  function getPageName() {
-    var pathname = window.location.pathname;
-    if (pathname === "/index.html") {
-      return "HomePage";
-    } else if (pathname.indexOf("detail.html") > -1) {
-      return "ProductPage";
-    }
-  }
-
-  function getProductInfo() {
-    return {
-      productName: $("#productMain h1 .text-center").text(),
-      productPrice: $("#productMain .price").text(),
-    };
-  }
-
-  function getCartSummary() {
-    var _products = [];
-
-    return {
-      totalPrice,
-      products: _products,
-    };
-  }
-
-  function getParam() {
-    var pageName = getPageName();
-    var result = null;
-
-    if (pageName === "ProductPage") {
-      result = getProductInfo();
-      result.productName = $("#productMain h1 .text-center").text();
-      result.productPrice = $("#productMain .price").text();
-      result.productImage = $(
-        "#productMain .owl-thumb-item:first-child"
-      ).text();
-      return result;
-    } else if (pageName === "Checkout") {
-      // get order information, add found information to the result
-      return getCartSummary;
-    }
-    return result;
-  }
-
-  function triggerPageEvent() {
-    var pageName = getPageName();
-    var params = getParam();
-    $(document).trigger("view:" + pageName, params);
-  }
-
-  triggerPageEvent();
+  $("head").append('<script src="js/main.js"/>');
 
   $(".shop-detail-carousel").owlCarousel({
     items: 1,
@@ -106,10 +52,6 @@ $(function () {
   // productDetailGallery(4000);
   utils();
 
-  // ------------------------------------------------------ //
-  // For demo purposes, can be deleted
-  // ------------------------------------------------------ //
-
   var stylesheet = $("link#theme-stylesheet");
   $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
   var alternateColour = $("link#new-stylesheet");
@@ -143,42 +85,6 @@ $(window).resize(function () {
     $(this).alignElementsSameHeight();
   }, 150);
 });
-
-/* product detail gallery */
-
-// function productDetailGallery(confDetailSwitch) {
-//     $('.thumb:first').addClass('active');
-//     timer = setInterval(autoSwitch, confDetailSwitch);
-//     $(".thumb").click(function(e) {
-//
-// 	switchImage($(this));
-// 	clearInterval(timer);
-// 	timer = setInterval(autoSwitch, confDetailSwitch);
-// 	e.preventDefault();
-//     }
-//     );
-//     $('#mainImage').hover(function() {
-// 	clearInterval(timer);
-//     }, function() {
-// 	timer = setInterval(autoSwitch, confDetailSwitch);
-//     });
-//
-//     function autoSwitch() {
-// 	var nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb');
-// 	if (nextThumb.length == 0) {
-// 	    nextThumb = $('.thumb:first');
-// 	}
-// 	switchImage(nextThumb);
-//     }
-//
-//     function switchImage(thumb) {
-//
-// 	$('.thumb').removeClass('active');
-// 	var bigUrl = thumb.attr('href');
-// 	thumb.addClass('active');
-// 	$('#mainImage img').attr('src', bigUrl);
-//     }
-// }
 
 function utils() {
   /* click on the box activates the radio */
